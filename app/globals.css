@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* =====================
+   Global Theme
+===================== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* =====================
+   Hero Section Gradient
+   (with opacity stops)
+===================== */
+:root {
+  --gradient-stop-0: rgba(38, 192, 255, 0.1);   /* #26C0FF with 80% opacity */
+  --gradient-stop-20: rgba(230, 0, 194, 0.1);   /* #E600C2 */
+  --gradient-stop-40: rgba(255, 73, 78, 0.1);   /* #FF494E */
+  --gradient-stop-60: rgba(255, 161, 62, 0.1);  /* #FFA13E */
+  --gradient-stop-80: rgba(255, 200, 55, 0.1);  /* #FFC837 */
+  --gradient-stop-100: rgba(0, 204, 61, 0.1);   /* #00CC3D */
+}
+
+/* Gradient background utility with opacity */
+.bg-hero-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--gradient-stop-0) 0%,
+    var(--gradient-stop-20) 20%,
+    var(--gradient-stop-40) 40%,
+    var(--gradient-stop-60) 60%,
+    var(--gradient-stop-80) 80%,
+    var(--gradient-stop-100) 100%
+  );
+}
+
+/* =====================
+   Button Gradient
+   (solid stops)
+===================== */
+:root {
+  --btn-gradient-0: #26C0FF;
+  --btn-gradient-20: #E600C2;
+  --btn-gradient-40: #FF494E;
+  --btn-gradient-60: #FFA13E;
+  --btn-gradient-80: #FFC837;
+  --btn-gradient-100: #00CC3D;
+}
+
+.bg-btn-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--btn-gradient-0) 0%,
+    var(--btn-gradient-20) 20%,
+    var(--btn-gradient-40) 40%,
+    var(--btn-gradient-60) 60%,
+    var(--btn-gradient-80) 80%,
+    var(--btn-gradient-100) 100%
+  );
+}
