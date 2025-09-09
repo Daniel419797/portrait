@@ -9,7 +9,7 @@ export const NavbarMobileMenu = ({
   setOpen: Dispatch<SetStateAction<boolean>>;
 }) => (
   <button
-    className="ml-auto flex min-[680px]:hidden items-center justify-center"
+    className="right-0 flex min-[680px]:hidden items-center justify-center"
     onClick={() => setOpen(!open)}
     aria-label="Toggle menu"
   >

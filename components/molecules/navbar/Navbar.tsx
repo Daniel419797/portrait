@@ -9,27 +9,30 @@ export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky mx-[2rem] top-[5%] z-50 px-safe-or-6 bg-white/80 items-center rounded-[25px] md:rounded-[50px] backdrop-blur-xl border-b border-gray-200">
-      <nav className="relative mx-auto flex max-w-screen-xl items-center gap-6 py-2 md:py-1.5 pl-6 pr-1.5">
+    <header className="sticky shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] mx-[1.5rem] top-[5%] z-50 px-safe-or-6 bg-white/80 flex items-center rounded-[25px] pr-1.5 justify-between md:rounded-[50px] overflow-hidden backdrop-blur-xl border-b border-gray-200">
+      <nav className="relative left-0 flex max-w-screen-xl items-center justify-center gap-6 py-2 md:py-1.5 pl-6 pr-1.5">
         <NavbarLogo />
 
         {/* Desktop */}
         <div className="hidden justify-between min-[680px]:flex flex-1 items-center gap-6">
           <NavbarLinks />
-          <NavbarActions />
+          {/* <NavbarActions /> */}
         </div>
 
-        {/* Mobile Toggle */}
-        <NavbarMobileMenu open={mobileOpen} setOpen={setMobileOpen} />
+        
       </nav>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="min-[680px]:hidden px-4 pb-4">
+        <div className="min-[680px]:hidden px-4 absolute pb-4">
           <NavbarLinks mobile />
-          <NavbarActions mobile />
+  
         </div>
+
       )}
+      <NavbarActions mobile />
+      {/* Mobile Toggle */}
+      <NavbarMobileMenu open={mobileOpen} setOpen={setMobileOpen} />
     </header>
   );
 };

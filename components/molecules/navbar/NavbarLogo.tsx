@@ -73,7 +73,7 @@ export const NavbarLogo = () => {
       </svg>
 
       {/* Logo Name */}
-      <span className="text-gray-700 select-none">
+      <span className="text-gray-700 hidden md:flex select-none">
         Portrait
       </span>
     </Link>

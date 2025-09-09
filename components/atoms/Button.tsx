@@ -9,7 +9,7 @@ const button = tv({
   base: "group inline-flex outline-none rounded-full cursor-pointer disabled:cursor-not-allowed relative overflow-hidden",
   variants: {
     size: {
-      sm: "h-11 p-1 text-sm",
+      sm: "h-9 p-1 text-sm",
       md: "h-12 p-1 text-base",
       lg: "h-14 p-1.5 text-lg",
     },
@@ -85,11 +85,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               // Rainbow border spinner
               <span
                 className={cn(
-                  "h-5 w-5 rounded-full border-2 border-transparent",
+                  "h-4 w-5 rounded-full border-2 border-transparent",
                   "bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500",
                   "bg-clip-border border-t-white",
                   "group-hover:animate-spin",
-                  size === "lg" ? "h-6 w-6" : "h-5 w-5"
+                  size === "lg" ? "h-4 w-6" : "h-4 w-5"
                 )}
               />
             ) : (
