@@ -9,9 +9,9 @@ const button = tv({
   base: "group inline-flex outline-none rounded-full cursor-pointer disabled:cursor-not-allowed relative overflow-hidden",
   variants: {
     size: {
-      sm: "h-11 p-1 text-sm",
-      md: "h-12 p-1 text-base",
-      lg: "h-14 p-1.5 text-lg",
+      sm: "h-8 p-1 text-sm",
+      md: "h-10 p-1 text-base",
+      lg: "h-12 p-1.5 text-lg",
     },
     full: {
       true: "w-full",
