@@ -9,7 +9,7 @@ const button = tv({
   base: "group inline-flex outline-none rounded-full cursor-pointer disabled:cursor-not-allowed relative overflow-hidden",
   variants: {
     size: {
-      sm: "h-8 p-1 text-sm",
+      sm: "h-8 p-0.5 text-sm",
       md: "h-10 p-1 text-base",
       lg: "h-12 p-1.5 text-lg",
     },
